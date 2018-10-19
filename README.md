@@ -4,7 +4,7 @@
 
 To use this template, your computer needs:
 
-- [Homebrew] (https://brew.sh/index_de)
+- [Homebrew](https://brew.sh/index_de)
 - [NodeJS](https://nodejs.org/en/) (8 or greater)
 - [Git](https://git-scm.com/)
 
