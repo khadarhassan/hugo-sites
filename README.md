@@ -10,7 +10,7 @@ To use this template, your computer needs:
 
 ### Hugo
 
-I used brew to install Hugo:
+Use brew to install Hugo:
 
 ```bash
 brew install hugo
