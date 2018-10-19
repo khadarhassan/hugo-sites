@@ -5,7 +5,7 @@ const uglify = require('gulp-uglify');
 const autoprefixer = require('gulp-autoprefixer');
 
 gulp.task('sass', function () {
-  return gulp.src(['./src/scss/app.scss'])
+  return gulp.src(['./node_modules/bulma/css/bulma.css', './src/scss/app.scss'])
     .pipe(sass().on('error', sass.logError))
     .pipe(sass({
       outputStyle: 'compressed'
@@ -30,5 +30,5 @@ gulp.task('sass', function () {
 // });
 
 gulp.task('watch', function () {
-  gulp.watch('./src/**/*', ['sass, minify']);
+  gulp.watch('./src/**/*', ['sass']);
 });

@@ -1,6 +1,6 @@
 ---
 author: "Khadar Hassan"
-Description: ""
+description: ""
 title: "My Second Article"
 date: 2018-10-19T15:58:15+02:00
 draft: true
