@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{{ partial "head" . }}
+
+<body>
+  {{ partial "header" . }}
+
+  <main class="container">
+    <article>
+      <h1>{{ .Title }}</h1>
+      <h6>{{ dateFormat "Monday Jan 2 2006" .Date }}</h6>
+      <hr>
+      <p>{{if .Params.author}}Author: {{.Params.Author}}{{end}}</p>
+      <p>{{ .Content }}</p>
+      <p><em>{{ if .Params.author }}</em></p>
+    </article>
+  </main>
+</body>
+
+</html>

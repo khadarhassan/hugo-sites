@@ -1,0 +1,13 @@
+{
+  "name": "hugo-sites",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^4.1.3",
+    "browser-sync": "^2.26.3",
+    "bulma": "^0.7.2",
+    "gsap": "^2.0.2",
+    "scrollmagic": "^2.0.6"
+  }
+}
