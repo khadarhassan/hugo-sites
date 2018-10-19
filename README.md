@@ -1,4 +1,4 @@
-# Simple Hugo default setup with gulp and browser-sync
+# Simple Hugo default setup with gulp and bulma
 
 ## Installation
 
