@@ -1,4 +1,4 @@
-# Simple Hugo default setup with gulp and browser-sync
+# Simple Hugo default setup with gulp and bulma
 
 ## Installation
 
@@ -20,7 +20,7 @@ Then open the folder in your command line, and install the needed dependencies:
 
 ```bash
 cd hugo-sites
-npm install
+yarn install
 ```
 
 Finally, run `hugo server -D --watch` to run Hugo. It will re-run every time you change a file.
