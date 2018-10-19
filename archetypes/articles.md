@@ -1,6 +1,6 @@
 ---
 Author: "Khadar Hassan"
-Description: ""
+description: ""
 title: "{{ replace .Name "-" " " | title }}"
 date: {{ .Date }}
 draft: true

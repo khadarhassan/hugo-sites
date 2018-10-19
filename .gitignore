@@ -34,5 +34,4 @@ node_modules/
 !.vscode/extensions.json
 
 # Hugo 
-
 static/
