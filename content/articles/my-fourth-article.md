@@ -3,7 +3,7 @@ Author: "Khadar Hassan"
 description: ""
 title: "My Fourth Article"
 date: 2018-10-21T14:47:24+02:00
-draft: true
+draft: false
 tags: ["tag1", "tag2"]
 categories: ["cat1"]
 ---

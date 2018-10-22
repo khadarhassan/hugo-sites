@@ -3,7 +3,7 @@ Author: "Khadar Hassan"
 description: ""
 title: "{{ replace .Name "-" " " | title }}"
 date: {{ .Date }}
-draft: true
+draft: false
 tags: ["tag1", "tag2"]
 categories: ["cat1"]
 ---
