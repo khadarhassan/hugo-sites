@@ -41,10 +41,10 @@
 
       var $form = $(this);
       $.post($form.attr("action"), $form.serialize()).then(function () {
-        $("#form")[0].reset();
         $('.notification').show();
       });
-
+      
+      $("#form")[0].reset();
     });
     
     $('.delete').on('click', function () {
