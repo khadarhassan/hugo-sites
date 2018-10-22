@@ -1,14 +1,36 @@
-<div class="container">
-  <nav class="navbar" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-      <a class="navbar-item" href="/">
-        Home
-      </a>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>{{ .Title }}</title>
+  <link rel="stylesheet" href="/css/app.css">
+</head>
+
+<body>
+  <div class="container">
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="/">
+          Hugo Sites
+        </a>
+      </div>
+      <div class="navbar-menu navbar-end">
+        {{ range .Site.Menus.main }}
+        <a class="navbar-item" href="{{ .URL }}">{{ .Name }}</a>
+        {{ end }}
+      </div>
+    </nav>
+  </div>
+
+  <section class="hero is-info is-large">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title">
+          {{ .Title }}
+        </h1>
+      </div>
     </div>
-    <div class="navbar-menu">
-      <a class="navbar-item">
-        Articles
-      </a>
-    </div>
-  </nav>
-</div>
+  </section>

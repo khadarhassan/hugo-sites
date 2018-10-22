@@ -1,49 +1,39 @@
-<!DOCTYPE html>
-<html lang="en">
+{{ define "main" }}
+<main class="container">
 
-{{ partial "head" . }}
+  <h1>Welcome to my {{ .Title }}</h1>
+  <p>{{ .Content }}</p>
 
-<body>
-  {{ partial "header" . }}
-  <main class="container">
+  <hr>
 
-    <h1>Welcome to my {{ .Title }}</h1>
-    <p>{{ .Content }}</p>
-
-    <hr>
-
-    <div class="columns">
-      {{ range first 3 .Data.Pages }}
-        {{ if eq .Type "articles" }}
-          <div class="column">
-            <article style="margin: 1rem 0;">
-                <div class="card">
-                  <header class="card-header">
-                    <p class="card-header-title">
-                      {{ .Title }}
-                    </p>
-                  </header>
-                  <div class="card-content">
-                    <div class="content">
-                      <p>{{ if .Params.tags }}<strong>Tags:</strong> {{range .Params.tags}}<a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> {{end}}{{end}}</p>
-                      <p>{{ if .Params.categories }}<strong>Categories:</strong> {{range .Params.categories}}<a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> {{end}}{{end}}</p>
-                      <br>
-                      <time datetime="2006-2-1">{{ dateFormat "Monday Jan 2 2006" .Date }}</time>
-                    </div>
-                  </div>
-                  <footer class="card-footer">
-                    <a href="{{ .Permalink }}" class="card-footer-item">Read more</a>
-                  </footer>
-                </div>
-              </article>
+  <div class="columns">
+    {{ range .Data.Pages }}
+    {{ if eq .Type "articles" }}
+    <div class="column">
+      <article style="margin: 1rem 0;">
+        <div class="card">
+          <header class="card-header">
+            <p class="card-header-title">
+              {{ .Title }}
+            </p>
+          </header>
+          <div class="card-content">
+            <div class="content">
+              <p>{{ if .Params.tags }}<strong>Tags:</strong> {{range .Params.tags}}<a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> {{end}}{{end}}</p>
+              <p>{{ if .Params.categories }}<strong>Categories:</strong> {{range .Params.categories}}<a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> {{end}}{{end}}</p>
+              <br>
+              <time datetime="2006-2-1">{{ dateFormat "Monday Jan 2 2006" .Date }}</time>
             </div>
-        {{ end }}
-      {{ end }}
+          </div>
+          <footer class="card-footer">
+            <a href="{{ .Permalink }}" class="card-footer-item">Read more</a>
+          </footer>
+        </div>
+      </article>
     </div>
-  </main>
+    {{ end }}
+    {{ end }}
+  </div>
+</main>
 
-  {{ partial "footer" . }}
-
-</body>
-
-</html>
+{{ end }}

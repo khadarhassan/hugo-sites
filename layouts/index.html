@@ -1,20 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
+{{ define "main" }}
 
-{{ partial "head" . }}
+<div class="container">
 
-<body>
+  <p>{{ .Content }}</p>
 
-  <div class="container">
+  <a class="button" href="/articles/">Articles</a>
 
-    {{ partial "header" . }}
+</div>
 
-    <p>{{ .Content }}</p>
-
-    <a class="button" href="/articles/">Articles</a>
-
-  </div>
-
-</body>
-
-</html>
+{{ end }}
