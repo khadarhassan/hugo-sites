@@ -1,0 +1,22 @@
+{{ define "main" }}
+
+<section class="hero is-info is-large">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        {{ .Title }}
+      </h1>
+    </div>
+  </div>
+</section>
+
+<main class="container">
+  <article style="margin: 1rem 0">
+    <p>{{ .Content }}</p>
+    <hr>
+    <h6>{{ dateFormat "Monday Jan 2 2006" .Date }}</h6>
+    <p><em>{{ if .Params.author }}Author {{ .Params.Author }}{{end}}</em></p>
+  </article>
+</main>
+
+{{ end }}
