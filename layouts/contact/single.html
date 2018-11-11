@@ -1,10 +1,20 @@
 {{ define "main" }}
 
 <main class="container">
+<<<<<<< Updated upstream
   <h1>{{ .Title }}</h1>
 
 {{ partial "form" . }}
 
+=======
+  <article style="margin: 1rem 0">
+    <p>{{ .Content }}</p>
+    <hr>
+    <h6>{{ dateFormat "Monday Jan 2 2006" .Date }}</h6>
+    <p><em>{{ if .Params.author }}Author {{ .Params.Author }}{{end}}</em></p>
+  </article>
+  {{ partial "form" .}}
+>>>>>>> Stashed changes
 </main>
 
 {{ end }}
