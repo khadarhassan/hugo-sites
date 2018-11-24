@@ -1,13 +1,6 @@
 baseURL = "/"
 languageCode = "en-us"
-title = "My New Hugo Site"
-PygmentsCodeFences = true
-PygmentsStyle = "manni"
-
-[taxonomies]
-  tag = "tags"
-  category = "categories"
-  mood = "moods"
+title = "My Site"
 
 [[menu.main]]
   name = "Home"
@@ -18,8 +11,8 @@ PygmentsStyle = "manni"
   url = "/about/"
   weight = 2
 [[menu.main]]
-  name = "Articles"
-  url = "/articles/"
+  name = "Blog"
+  url = "/blog/"
   weight = 3
 [[menu.main]]
   name = "Contact"
