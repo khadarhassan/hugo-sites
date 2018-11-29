@@ -1,8 +1,27 @@
-{{ partial "header" . }}
-<div class="container">
-  {{ block "main" .}}
-  
-  {{ end }}
-</div>
+<!DOCTYPE html>
+<html lang="en">
 
-{{ partial "footer" . }}
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>{{ .Title }}</title>
+  <link rel="stylesheet" href="{{.Site.BaseURL}}css/app.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+  {{ partial "header" . }}
+
+    <main class="container">
+    {{ block "main" .}}
+
+    {{ end }}
+    </main>
+
+    {{ partial "footer" . }}
+
+</body>
+
+</html>
